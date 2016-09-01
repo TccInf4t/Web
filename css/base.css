@@ -1,0 +1,226 @@
+* {font-family:arial, sans-serif;}
+body {margin:0;background-color:transparent;}
+
+#corpo {
+	width:100%;min-width:1000px;height:100%;
+}
+
+/* Cabeçalho */
+header {
+	width:100%;min-width:1000px;height:auto;margin:0 auto;padding:0;
+	background-color:#333;box-shadow:0 0 10px 1px #888;
+}
+
+#barra_lateral {
+	width:250px;height:100%;padding:0 50px;
+	background-color:#333;box-shadow:0 0 10px 3px #333;
+	position:fixed;top:0;left:-400px;
+	z-index:1;
+}
+
+#br_tit {
+	margin:50px 0 18px 0;padding:0 0 5px 0;
+	display:block;
+	border-bottom:solid 2px #fff;
+	color:#fff;text-transform:uppercase;text-align:left;font-size:18px;
+}
+
+.br_item {
+	margin:0;padding:5px 0;
+	display:block;
+	color:#eee;text-transform:capitalize;text-align:left;font-size:17px;
+}
+
+.br_item:hover {
+	color:#fff;
+	transition:all 100ms;
+}
+
+.br_item a {
+	width:100%;height:100%;
+	display:block;
+	color:inherit;text-decoration:none;
+}
+
+#caixaLogin {
+	width:260px;height:40px;margin:20px 0 0 10px;
+	float:left;
+	
+}
+
+.itemLogin {
+	width:120px;float:left;margin:0 5px;padding:12px 0;
+	display:block;
+	color:#fff;text-align:center;text-transform:uppercase;font-size:12px;
+	background-color:transparent;outline:solid 1px #fff;
+}
+
+.itemLogin:first-child {
+	/*border-right:solid 1px #eee;*/
+}
+
+#centro {
+	width:1000px;height:100px;margin:0 auto 20px auto;
+	/*background-color:#444;*/
+}
+
+#logo {
+	width:400px;height:100px;margin:0 auto 25px auto;
+	background:transparent url(../img/imgLogo.png) center/auto 100% no-repeat;
+}
+	
+nav {
+	width:100%;min-width:1000px;height:50px;margin:0 auto;padding:10px 0;
+	background-color:transparent;
+}
+
+/* Carrinho de Compras */
+#carrinho {
+	width:100px;height:100px;margin:20px 40px 0 0;
+	float:right;
+	position:relative;
+	background:transparent url(../img/icon/iconCarrinho.png) center/80px no-repeat;
+}
+
+#carrinho #cont {
+	width:36px;height:36px;
+	background-color:#333;
+	border-radius:100px;border:solid 2px #fff;
+	position:absolute;top:5px;right:0px;
+	color:#fff;text-align:center;line-height:36px;
+}
+
+/* Icone de Menu e Pesquisa */
+#pesqMenu {
+	width:130px;height:50px;margin:0 5px 0 30px;
+	float:left;
+	background-color:transparent;
+}
+
+#btnMenu {
+	background:transparent url(../img/icon/iconMenu.png) center/25px no-repeat;
+}
+
+#btnPesquisa {
+	background:transparent url(../img/icon/iconPesquisa.png) center/25px no-repeat;
+}
+
+#pesqMenu .item	{
+	width:50px;height:50px;
+	float:left;
+	background-color:#5af;border-radius:100px;
+}
+
+#pesqMenu .item:hover {
+	cursor:pointer;
+	background-color:#888;
+	transition:all 200ms;
+}
+
+#pesqMenu .item:first-child	{
+	margin:0 5px 0 0;
+}
+
+#listaMenu {
+	width:1000px;height:50px;margin:0 auto;padding:0;
+	list-style:none;
+}
+
+#listaMenu li {
+	width:166px;height:50px;padding:0 0 8px 0;
+	float:left;
+	border-bottom:solid 3px transparent;
+	color:#fff;
+	transition:all 50ms;
+}
+
+#listaMenu li:hover {
+	padding:0 0 7px 0;
+	border-bottom:solid 3px #f0f0f0;
+	transition:all 200ms;
+}
+
+#listaMenu li a {
+	width:100%;height:100%;
+	display:block;
+	color:inherit;text-align:center;text-decoration:none;line-height:50px;text-transform:uppercase;font-size:15px;font-weight:bold;
+}
+
+/* Slider */
+#slider {
+	width:100%;height:400px;margin:0 auto;
+	background-color:#eee;
+	position:relative;
+}
+
+.sliderBtn {
+	width:60px;height:60px;
+	position:absolute;top:170px;
+	background-color:#e0e0e0;border-radius:100px;
+}
+
+#btnEsquerdo {
+	left:25px;
+}
+
+#btnDireito	 {
+	right:25px;
+}
+
+/* Conteúdo */
+#conteudo {
+	width:100%;height:1000px;margin:0 auto;padding:50px 0;
+	outline:solid 1px #555;background-color:transparent;
+}
+
+.titulo {
+	margin:10px auto 0 auto;padding:0 0 5px 0;
+	/*border-bottom:solid 1px #888;*/
+	clear:both;
+	color:#fff;text-transform:capitalize;font-weight:normal;font-size:22px;
+}
+
+.caixa {
+	width:283px;height:auto;margin:10px 25px;
+	float:left;
+	/*background-color:#eee;*/
+}
+
+.caixaImg {
+	width:253px;height:253px;margin:15px auto;
+	background-color:#f5f5f5;
+}
+
+.caixaInfo {
+	width:223px;height:60px;margin:0 auto;
+	/*background-color:#ddd;*/
+}
+
+.nome, .preco{
+	color:#444;text-align:left;text-transform:capitalize;font-weight:;
+	display:block;
+}
+
+.nome {
+	margin:0 0 3px 0;
+}
+
+.preco {
+	font-weight:normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
