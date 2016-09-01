@@ -43,16 +43,16 @@ header {
 }
 
 #caixaLogin {
-	width:260px;height:40px;margin:20px 0 0 10px;
+	width:241px;height:46px;margin:20px 0 0 0;padding:0 10px 0 0;
 	float:left;
-	
+	border:solid 2px #f0f0f0;border-left:none;border-radius:0 100px 100px 0;
 }
 
 .itemLogin {
-	width:120px;float:left;margin:0 5px;padding:12px 0;
+	float:left;margin:0;padding:15px 20px;
 	display:block;
-	color:#fff;text-align:center;text-transform:uppercase;font-size:12px;
-	background-color:transparent;outline:solid 1px #fff;
+	color:#f0f0f0;text-align:center;text-transform:uppercase;font-size:14px;font-weight:bold;
+	background-color:;
 }
 
 .itemLogin:first-child {
@@ -60,18 +60,18 @@ header {
 }
 
 #centro {
-	width:1000px;height:100px;margin:0 auto 20px auto;
-	/*background-color:#444;*/
+	width:1000px;height:auto;margin:0 auto;padding:0;
+	/*background-color:#888;*/
 }
 
 #logo {
-	width:400px;height:100px;margin:0 auto 25px auto;
-	background:transparent url(../img/logo.png) center/auto 100% no-repeat;
+	width:150px;height:120px;margin:0 auto;
+	background:transparent url(../img/logo.png) center/100% auto no-repeat;
 }
 	
 nav {
-	width:100%;min-width:1000px;height:50px;margin:0 auto;padding:10px 0;
-	background-color:transparent;
+	width:100%;min-width:1000px;height:50px;margin:15px auto 0 auto;padding:10px 0;
+	background-color:#444;
 }
 
 /* Carrinho de Compras */
@@ -108,7 +108,7 @@ nav {
 #pesqMenu .item	{
 	width:50px;height:50px;
 	float:left;
-	background-color:#5af;border-radius:100px;
+	background-color:#555;border-radius:100px;
 }
 
 #pesqMenu .item:hover {
@@ -122,12 +122,12 @@ nav {
 }
 
 #listaMenu {
-	width:1000px;height:50px;margin:0 auto;padding:0;
+	width:1000px;height:100%;margin:0 auto;padding:0;
 	list-style:none;
 }
 
 #listaMenu li {
-	width:166px;height:50px;padding:0 0 8px 0;
+	width:165px;height:50px;padding:0 0 8px 0;
 	float:left;
 	border-bottom:solid 3px transparent;
 	color:#fff;
@@ -135,7 +135,7 @@ nav {
 }
 
 #listaMenu li:hover {
-	padding:0 0 7px 0;
+	padding:0 0 5px 0;
 	border-bottom:solid 3px #f0f0f0;
 	transition:all 200ms;
 }

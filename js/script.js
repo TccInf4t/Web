@@ -6,6 +6,6 @@ $(function(){
 	});
 	
 	$(document).click(function(Event){
-		if(Event.attr("id") != "barra_lateral") console.log("Hide");
+		if(event.attr("id") != "barra_lateral") console.log("Hide");
 	});
 });
