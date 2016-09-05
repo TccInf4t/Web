@@ -8,7 +8,8 @@ body {margin:0;background-color:transparent;}
 /* Cabeçalho */
 header {
 	width:100%;min-width:1000px;height:auto;margin:0 auto;padding:0;
-	background-color:transparent;box-shadow:0 0 10px 1px #888;
+	background-color:transparent;box-shadow:0 0 10px 1px #aaa;
+
 }
 
 #barra_lateral {
@@ -45,13 +46,13 @@ header {
 #caixaLogin {
 	width:241px;height:46px;margin:0 0 0 0;padding:3px 40px 8px 10px;
 	float:left;
-	background-color:#444;border-radius:0 0 100px 0;
+	background-color:transparent;border-radius:0 0 100px 0;
 }
 
 .itemLogin {
 	float:left;margin:0;padding:15px 20px;
 	display:block;
-	color:#fff;text-align:center;text-transform:uppercase;font-size:14px;font-weight:bold;
+	color:#555;text-align:center;text-transform:uppercase;font-size:14px;font-weight:bold;
 }
 
 .itemLogin:first-child {
@@ -72,7 +73,7 @@ header {
 	
 nav {
 	width:100%;min-width:1000px;height:50px;margin:0 auto 0 auto;padding:10px 0;
-	background-color:#444;
+	background-color:#f0f0f0;
 }
 
 /* Carrinho de Compras */
@@ -128,10 +129,10 @@ nav {
 }
 
 #listaMenu li {
-	width:165px;height:50px;padding:0 0 8px 0;
+	width:165px;height:50px;padding:0 0 10px 0;
 	float:left;
 	border-bottom:solid 3px transparent;
-	color:#fff;
+	color:#555;
 	transition:all 50ms;
 }
 
@@ -141,8 +142,8 @@ nav {
 }
 
 #listaMenu li:hover {
-	padding:0 0 5px 0;
-	border-bottom:solid 3px #f0f0f0;
+	padding:0 0 7px 0;
+	border-bottom:solid 3px #555;
 	transition:all 200ms;
 }
 
@@ -155,14 +156,14 @@ nav {
 /* Slider */
 #slider {
 	width:100%;height:400px;margin:0 auto;
-	background-color:#eee;
+	background-color:#e0e0e0;
 	position:relative;
 }
 
 .sliderBtn {
 	width:60px;height:60px;
 	position:absolute;top:170px;
-	background-color:#e0e0e0;border-radius:100px;
+	background-color:#d0d0d0;border-radius:100px;
 }
 
 #btnEsquerdo {
@@ -199,7 +200,7 @@ nav {
 
 .caixaImg {
 	width:250px;height:250px;margin:0;
-	background-color:#f5f5f5;
+	background-color:#f5f5f5;outline:solid 1px #d0d0d0;
 }
 
 .caixaInfo {
