@@ -1,0 +1,40 @@
+.lojaItem {
+	width:1000px;height:310px;margin:0 auto 50px auto;padding:0 0 50px 0;
+	border-bottom:solid 1px #ddd;
+	/*background-color:#f0f0f0;*/
+}
+
+.infoNome {
+	margin:0 20px 20px 20px;
+	display:block;
+	color:#555;font-size:22px;
+}
+
+.lojaInfo {
+	width:400px;height:310px;
+	float:left;
+	/*background-color:#e0e0e0;*/
+}
+
+.infoItem {
+	padding:0 20px;
+	display:block;
+	color:#777;text-transform:uppercase;font-size:12px;
+}
+
+.infoCont {
+	margin:0 0 8px 0;padding:0 20px;
+	display:block;
+	color:#555;font-size:17px;
+}
+
+.lojaMapa {
+	width:600px;height:310px;
+	float:left;
+	background:transparent url(../img/mapa.jpg) center/100% no-repeat;box-shadow:0 0 10px 1px #eee;
+}
+
+.lojaMapa iframe {
+	width:100%;height:100%;
+	border:none;
+}
