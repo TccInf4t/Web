@@ -1,0 +1,21 @@
+#titulo_conteudo{
+	font-size: 20px; color: #555; font-family: arial, sans-serif;
+	
+}
+
+#texto_conteudo{
+	width: 1000px;height: auto; font-family: arial, sans-serif; text-align: justify;color: #222;
+}
+
+#imagens{
+	width: 1000px; height: 400px; background: url(../img/Img_Quem_Somos.jpg) no-repeat 100% 0%; background-size: cover;
+}
+#imagens_2{
+	width: 500px; height: 400px;background: url(../img/galpao.jpg) no-repeat 100% 0%; background-size: cover;
+}
+
+#texto_2{
+	width: 482px;height: auto; color: #222; font-family: arial, sans-serif;
+	position: relative;top: -399px; left: 526px; text-align: justify;
+	
+}
