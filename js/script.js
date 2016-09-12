@@ -5,7 +5,13 @@ $(function(){
 		}, 200);
 	});
 	
-	$(document).click(function(Event){
-		if(event.attr("id") != "barra_lateral") console.log("Hide");
+	$(document).click(function(event){
+		var obj = event.target;
+		
+		if(obj.id != "barra_lateral" && obj.id != "btnMenu"){
+			$("#barra_lateral").animate({
+				left: "-400px"
+			}, 200);
+		}
 	});
 });

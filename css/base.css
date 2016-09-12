@@ -13,7 +13,7 @@ header {
 
 #barra_lateral {
 	width:250px;height:100%;padding:0 50px;
-	background-color:#333;box-shadow:0 0 10px 3px #333;
+	background-color:#f0f0f0;box-shadow:0 0 10px 3px #222;
 	position:fixed;top:0;left:-400px;
 	z-index:1;
 }
@@ -21,18 +21,18 @@ header {
 #br_tit {
 	margin:50px 0 18px 0;padding:0 0 5px 0;
 	display:block;
-	border-bottom:solid 2px #fff;
-	color:#fff;text-transform:uppercase;text-align:left;font-size:18px;
+	border-bottom:solid 2px #555;
+	color:#555;text-transform:uppercase;text-align:left;font-size:18px;
 }
 
 .br_item {
 	margin:0;padding:5px 0;
 	display:block;
-	color:#eee;text-transform:capitalize;text-align:left;font-size:17px;
+	color:#888;text-transform:capitalize;text-align:left;font-size:17px;
 }
 
 .br_item:hover {
-	color:#fff;
+	color:#333;
 	transition:all 100ms;
 }
 
@@ -65,7 +65,7 @@ header {
 
 #logo {
 	width:500px;height:120px;margin:0 auto;
-	background:transparent url(../img/logo.png) center/100px auto no-repeat;
+	background:transparent url(../img/logoNovo.png) center/100px auto no-repeat;
 	border-radius:200px;
 	color:#555;text-align:center;line-height:120px;font-size:62px;
 }
@@ -190,59 +190,30 @@ nav {
 	/*outline:solid 1px #ddd;*/background-color:transparent;
 }
 
-.titulo {
-	margin:10px 0 25px 0;padding:0 0 5px 0;
-	clear:both;
-	color:#333;text-transform:capitalize;font-weight:normal;font-size:22px;
-}
-
-/* Blocos de Produtos */
-.caixa_ln {
-	width:auto;height:309px;margin:0 0 100px 0;
-	/*background-color:#ccc;*/
-}
-
-.caixa {
-	width:250px;height:auto;margin:0 41px;
-	float:left;
+#caixaDica {
+	width:1000px;height:200px;margin:0 0 70px 0;padding:0;
 	/*background-color:#eee;*/
 }
 
-.caixaImg {
-	width:250px;height:250px;margin:0;
-	background:transparent center/200px no-repeat;border-bottom:solid 1px #ddd;
+#caixaDica h1 {
+	color:#555;font-weight:normal;font-size:32px;
 }
 
-#caixaImg1 {background-image:url(../img/calota.jpg);}
-#caixaImg2 {background-image:url(../img/cilindro_bloco.jpg);}
-#caixaImg3 {background-image:url(../img/farol.jpg);}
-#caixaImg4 {background-image:url(../img/pistao.jpg);}
-#caixaImg5 {background-image:url(../img/retrovisor.jpg);}
-#caixaImg6 {background-image:url(../img/amortecedor.jpg);}
-#caixaImg7 {background-image:url(../img/cabo.jpg);}
-#caixaImg8 {background-image:url(../img/filtro_ar.jpg);}
-#caixaImg9 {background-image:url(../img/sapata.jpg);}
-#caixaImg10 {background-image:url(../img/parafuso.jpg);}
-#caixaImg11 {background-image:url(../img/disco.jpg);}
-#caixaImg12 {background-image:url(../img/caixa.jpg);}
-
-.caixaInfo {
-	width:230px;height:auto;margin:0;padding:10px;
-	/*background-color:#ddd;*/
-	/*outline:solid 1px #e0e0e0;*/
+#caixaDica p {
+	padding:0;
+	color:#444;text-align:justify;line-height:23px;
 }
 
-.nome, .preco{
-	color:#555;text-align:center;text-transform:capitalize;font-weight:;
+#caixaDica #dataDica {
+	padding:5px;
 	display:block;
+	color:#222;text-align:left;font-size:17px;
 }
 
-.nome {
-	margin:0 0 5px 0;
-}
-
-.preco {
-	/*font-weight:bold;*/
+#caixaDica #outrasDicas {
+	display:block;
+	float:right;
+	color:#25f;text-decoration:none;text-transform:capitalize;
 }
 
 footer {

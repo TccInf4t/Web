@@ -1,0 +1,38 @@
+
+
+#titulo{
+	margin: 0;
+	padding: 0;
+	color: #333333;
+}
+
+.linha{
+	width: 80%;
+	margin: 0;
+	padding: 0;
+}
+
+.tituloParceiro{
+	color: #666666;
+	padding: 0;
+	padding-top: 50px;
+	font-size: 26px;
+}
+
+.logoPaceiro{
+	width: 100%;
+	height: 200px;
+	outline: none; 
+	margin: 0px;
+	padding: 0px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#logos{
+	width: 600px;
+	height: auto;
+	outline: none; 
+	margin: 0 auto;
+}

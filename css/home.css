@@ -1,0 +1,19 @@
+/* IMAGENS FIXAS */
+#caixaImg1 {background-image:url(../img/calota.jpg);}
+#caixaImg2 {background-image:url(../img/cilindro_bloco.jpg);}
+#caixaImg3 {background-image:url(../img/farol.jpg);}
+#caixaImg4 {background-image:url(../img/pistao.jpg);}
+#caixaImg5 {background-image:url(../img/retrovisor.jpg);}
+#caixaImg6 {background-image:url(../img/amortecedor.jpg);}
+#caixaImg7 {background-image:url(../img/cabo.jpg);}
+#caixaImg8 {background-image:url(../img/filtro_ar.jpg);}
+#caixaImg9 {background-image:url(../img/sapata.jpg);}
+#caixaImg10 {background-image:url(../img/parafuso.jpg);}
+#caixaImg11 {background-image:url(../img/disco.jpg);}
+#caixaImg12 {background-image:url(../img/caixa.jpg);}
+
+.titulo {
+	margin:10px 0 25px 0;padding:0 0 5px 0;
+	clear:both;
+	color:#333;text-transform:capitalize;font-weight:normal;font-size:22px;
+}
