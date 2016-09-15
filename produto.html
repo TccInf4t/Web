@@ -7,7 +7,7 @@
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
 		<link href="css/item.css" type="text/css" rel="stylesheet">
-		<link href="css/contato.css" type="text/css" rel="stylesheet">
+		<link href="css/produto.css" type="text/css" rel="stylesheet">
 		
 		<script src="js/jquery3.1.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
@@ -26,6 +26,12 @@
 				
 				<div id="logo"></div> <!-- Logo -->
 				<nav>
+					<div id="caixaPesq">
+						<div id="caixaPesqFechar"></div>
+						<form name="formPesq" id="formPesq" method="post" action="#">
+							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+						</form>
+					</div>
 					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
 						<div class="item" id="btnMenu"></div>
 						<div class="item" id="btnPesquisa"></div>
@@ -40,6 +46,11 @@
 						</li>
 						<li>
 							<a href="institucional.html">institucional</a>
+							<ul class="subMenu">
+								<li><a href="parceiro.html">parceiros</a></li>
+								<li><a href="eventos.html">eventos</a></li>
+								<li><a href="sobre.html">sobre</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="lojas.html">lojas</a>
@@ -73,25 +84,66 @@
 					<a href="#">marca</a>
 				</span>
 			</div>
-			
+
 			<div id="conteudo">
-				<h1 class="titPagina">Contate-nos</h1>
+				<h1 id="detalhePag">Calota Prateada</h1>
+				<div id="detalhe">
+					<div id="detalheEsq">
+						<div id="produtoImg"></div>
+					</div>
+					<div id="detalheDir">
+						<div class="caixaItem">
+							<span class="item">preço</span>
+							<span class="cont">R$ 195,80</span>
+						</div>
 
-				<form name="formContato" id="formContato" method="post" action="">
-					<input type="text" name="txtNome" class="formText" value="" placeholder="Insira seu nome" />
-					<input type="text" name="txtNome" class="formText" value="" placeholder="Insira seu email" />
-					<input type="text" name="txtNome" class="formText" value="" placeholder="Insira seu telefone" />
-					
-					<select class="formSlt">
-						<option selected hidden>Motivo</option>
-						<option>Sugestão</option>
-						<option>Critica</option>
-						<option>Dúvida</option>
-					</select>
+						<div class="caixaItem">
+							<span class="item">ano</span>
+							<span class="cont">1998</span>
+						</div>
 
-					<textarea name="txtArea" class="formTextArea" placeholder="insira ser comentario"></textarea>
-					<input type="submit" name="btnSubmit" class="formBtn" value="enviar" />
-				</form>
+						<div class="caixaItem">
+							<span class="item">peso</span>
+							<span class="cont">10 kg</span>
+						</div>
+
+						<div class="caixaItem">
+							<span class="item">marca</span>
+							<span class="cont">ford</span>
+						</div>
+
+						<div class="caixaItem">
+							<span class="item">modelo</span>
+							<span class="cont">HB20</span>
+						</div>
+
+						<div class="caixaItem">
+							<span class="item">tipo</span>
+							<span class="cont">de carro</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="desc">
+					<h1>Descrição</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
 			</div>
 			<footer>
 				<div id="rod_centro">
