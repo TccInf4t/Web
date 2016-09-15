@@ -49,20 +49,22 @@ p {
 
 .caixaImg {
 	width:250px;height:250px;margin:0;
-	background:transparent center/200px no-repeat;border-bottom:solid 1px #ddd;
+	background:transparent center/200px no-repeat;
 	position:relative;
 }
 
 .caixaNota {
-	width:auto;height:30px;
+	width:auto;height:30px;padding:0 0 8px 0;
 	/*outline:solid 1px #f50;*/
+	border-bottom:solid 1px #ddd;
 }
 
 .caixaNotaImg {
 	width:40px;height:30px;margin:0 5px;
 	display:block;
 	float:left;
-	background-color:#e0e0e0;
+	opacity:0.3;
+	background:transparent url(../img/icon/estrela.png) center/30px no-repeat;
 }
 
 .caixaImg:hover > .btnAdicionar {
