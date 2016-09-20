@@ -16,7 +16,7 @@
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<div id="cont">02</div>
+					<!-- <div id="cont">02</div> -->
 				</div>
 				
 				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
@@ -26,6 +26,12 @@
 				
 				<div id="logo"></div> <!-- Logo -->
 				<nav>
+					<div id="caixaPesq">
+						<div id="caixaPesqFechar"></div>
+						<form name="formPesq" id="formPesq" method="post" action="#">
+							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+						</form>
+					</div>
 					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
 						<div class="item" id="btnMenu"></div>
 						<div class="item" id="btnPesquisa"></div>
@@ -39,7 +45,12 @@
 							<a href="dicas.html">dicas</a>
 						</li>
 						<li>
-							<a href="institucional.html">institucional</a>
+							<a href="#">institucional</a>
+							<ul class="subMenu">
+								<li><a href="parceiro.html">parceiros</a></li>
+								<li><a href="eventos.html">eventos</a></li>
+								<li><a href="sobre.html">sobre</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="lojas.html">lojas</a>
@@ -74,8 +85,8 @@
 				</span>
 			</div>
 			<div id="conteudo">
-				<h1 id="titulo">Nossos Parceiros</h1>
-				<hr class="linha"/>
+				<h1 class="titPag">Nossos Parceiros</h1>
+
 				<div id="logos">
 					<h1 class="tituloParceiro">Detran</h1>
 						<a href="#" target="_blank">

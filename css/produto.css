@@ -1,38 +1,42 @@
-#detalhePag {
-	margin:0;padding:0 20px 10px 20px;
-	color:#555;
-	border-bottom:solid 1px #aaa;
-}
-
 #detalhe {
 	width:1000px;height:400px;margin:0 0 55px 0;
-	/*background-color:#f0f0f0;*/
+	/*outline:solid 1px #000;*/
 }
 
 #detalheEsq, #detalheDir {
 	height:100%;
-	float:left;
 }
 
 #detalheEsq {
 	width:400px;
+	float:left;
 	/*background-color:#ddd;*/
 }
 
 #produtoImg {
-	width:400px;height:400px;
-	background:transparent url(../img/pistao.jpg) center/100% auto no-repeat;
+	width:400px;height:235px;
+	background:transparent url(../img/calota.jpg) center/auto 100% no-repeat;
 }
 
 #detalheDir {
-	width:460px;height:auto;margin:82px 50px;
-	/*background-color:#eee;*/
+	width:460px;height:auto;/*margin:82px 50px;*/
+	float:left;
+	/*background-color:#ddd;*/
+	position:relative;
 }
 
 .caixaItem {
 	width:auto;height:25px;
 	margin:0 0 14px 0;
 	/*background-color:#f23;*/
+}
+
+.addCarrinho {
+	width:100px;height:100px;
+	display:block;
+	position:absolute;top:50px;right:0;
+	float:right;
+	background:#333 url(../img/icon/carrinho_adicionar.png) center/70px no-repeat;border-radius:100px;
 }
 
 .item {
@@ -43,7 +47,7 @@
 }
 
 .cont {
-	width:100px;height:100%;
+	width:auto;height:100%;
 	display:block;
 	float:left;
 	color:#444;text-transform:unset;line-height:25px;font-size:21px;	
@@ -54,10 +58,29 @@
 	/*outline:solid 1px #f23;*/
 }
 
-#desc h1 {
+.subTit {
 	color:#333;text-align:left;text-transform:uppercase;font-size:22px;
 }
 
 #desc p {
 	margin:0 0 20px 0;
+}
+
+#comentario {
+	margin:50px 0 0 0;
+}
+
+.comentarioItem {
+	width:800px;margin:10px 0 40px 0;
+	/*outline:solid 1px #f23;*/
+}
+
+.comentarioUsuario {
+	margin:0 0 10px 0;
+	display:block;
+	color:#555;font-size:18px;
+}
+
+.comentarioCont {
+	color:#777;font-size:17px;
 }

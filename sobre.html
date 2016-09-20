@@ -6,6 +6,7 @@
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
+		<link href="css/item.css" type="text/css" rel="stylesheet">
 		<link href="css/sobre.css" type="text/css" rel="stylesheet">
 
 		<script src="js/jquery3.1.js" type="text/javascript"></script>
@@ -15,7 +16,7 @@
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<div id="cont">02</div>
+					<!-- <div id="cont">02</div> -->
 				</div>
 				
 				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
@@ -23,10 +24,14 @@
 					<span class="itemLogin">entrar</span>
 				</div>
 				
-				<div id="logo">
-					OnPeças
-				</div> <!-- Logo -->
+				<div id="logo"></div> <!-- Logo -->
 				<nav>
+					<div id="caixaPesq">
+						<div id="caixaPesqFechar"></div>
+						<form name="formPesq" id="formPesq" method="post" action="#">
+							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+						</form>
+					</div>
 					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
 						<div class="item" id="btnMenu"></div>
 						<div class="item" id="btnPesquisa"></div>
@@ -40,7 +45,12 @@
 							<a href="dicas.html">dicas</a>
 						</li>
 						<li>
-							<a href="institucional.html">institucional</a>
+							<a href="#">institucional</a>
+							<ul class="subMenu">
+								<li><a href="parceiro.html">parceiros</a></li>
+								<li><a href="eventos.html">eventos</a></li>
+								<li><a href="sobre.html">sobre</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="lojas.html">lojas</a>
@@ -77,15 +87,9 @@
 		
 			
 			<div id="conteudo">
-				<div id="titulo_conteudo">
-					<h1> Um pouco sobre nós... </h1>
-				</div>
-				</br>
+				<h1 class="titPag">Um pouco sobre nós</h1>
 				
-				<div id="imagens">
-				</div>
-				</br>
-				</br>
+				<div id="imagens"></div>
 				
 				<div id="texto_conteudo">
 					<p>
@@ -102,7 +106,7 @@
 						Quinze anos após a fundação a empresa vem crescendo em níveis exorbitantes, atualmente possuimos um galpão com mais de 5 Km², mais de UM MILHÃO de itens no estoque 
 						para variar nosso atendimento, tudo isso para apenas satisfazer a nossos clientes (heheheheh).
 					</p>
-				</div></br>
+				</div>
 				
 				<div id="imagens_2">
 				</div>
@@ -117,8 +121,6 @@
 						Quinze anos após a fundação a empresa vem crescendo em níveis exorbitantes, atualmente possuimos um galpão com mais de 5 Km², mais de UM MILHÃO de itens no estoque 
 						para variar nosso atendimento, tudo isso para apenas satisfazer a nossos clientes (heheheheh).
 					</p>
-					
-				
 				</div>
 			</div>
 			<footer>

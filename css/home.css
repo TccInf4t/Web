@@ -12,8 +12,37 @@
 #caixaImg11 {background-image:url(../img/disco.jpg);}
 #caixaImg12 {background-image:url(../img/caixa.jpg);}
 
-.titulo {
+/* IMAGENS FIXAS */
+#slideImg1 {background-image:url(../img/onix.jpg);}
+#slideImg2 {background-image:url(../img/slideImg.jpg);}
+
+/*#conteudo {
+	width:100%;
+}*/
+
+.caixaTitulo {
 	margin:10px 0 25px 0;padding:0 0 5px 0;
 	clear:both;
-	color:#333;text-transform:capitalize;font-weight:normal;font-size:22px;
+	color:#222;text-transform:capitalize;font-weight:normal;font-size:27px;
+}
+
+#caixaDica {
+	width:1000px;height:auto;margin:0 0 70px 0;padding:50px 0;
+	/*outline:solid 1px #f23;*/
+	border-top:solid 1px #bbb;
+	border-bottom:solid 1px #bbb;
+}
+
+#caixaDica #dataDica {
+	padding:5px;
+	display:block;
+	color:#222;text-align:left;font-size:17px;
+}
+
+#outrasDicas {
+	height:31px;margin:3px 0;padding:0 15px;
+	display:block;
+	float:right;
+	color:#25f;text-decoration:none;text-transform:capitalize;line-height:31px;font-size:17px;
+	outline:solid 1px #25f;
 }

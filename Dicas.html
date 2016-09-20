@@ -16,7 +16,7 @@
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<div id="cont">02</div>
+					<!-- <div id="cont">02</div> -->
 				</div>
 				
 				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
@@ -26,6 +26,12 @@
 				
 				<div id="logo"></div> <!-- Logo -->
 				<nav>
+					<div id="caixaPesq">
+						<div id="caixaPesqFechar"></div>
+						<form name="formPesq" id="formPesq" method="post" action="#">
+							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+						</form>
+					</div>
 					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
 						<div class="item" id="btnMenu"></div>
 						<div class="item" id="btnPesquisa"></div>
@@ -39,7 +45,12 @@
 							<a href="dicas.html">dicas</a>
 						</li>
 						<li>
-							<a href="institucional.html">institucional</a>
+							<a href="#">institucional</a>
+							<ul class="subMenu">
+								<li><a href="parceiro.html">parceiros</a></li>
+								<li><a href="eventos.html">eventos</a></li>
+								<li><a href="sobre.html">sobre</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="lojas.html">lojas</a>
@@ -75,9 +86,7 @@
 			</div>
 			
 			<div id="conteudo">
-				<div id="titulo_conteudo">
-					<h1> Como Reparar Seu Motor V8 </h1>
-				</div>
+				<h1 class="titPag">Como Reparar Seu Motor V8</h1>
 				
 				<div id="texto_conteudo">
 					<p>
@@ -94,16 +103,16 @@
 					Veja mais:
 				</div>
 				
-				<div id="cont-01" >
-					<a><h4> Como Limpar o Pneu da Forma Correta </h4></a>
+				<div class="dicaItem" >
+					<span>Como Limpar o Pneu da Forma Correta</span>
 				</div>
-				
-				<div id="cont-02">
-					<a><a><h4> Como Limpar o Pneu da Forma Correta </h4></a></a>
+
+				<div class="dicaItem" >
+					<span>Como Limpar o Pneu da Forma Correta</span>
 				</div>
-				
-				<div id="cont-03">
-					<a><a><h4> Como Limpar o Pneu da Forma Correta </h4></a></a>
+
+				<div class="dicaItem" >
+					<span>Como Limpar o Pneu da Forma Correta</span>
 				</div>
 			</div>
 			<footer>

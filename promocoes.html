@@ -16,7 +16,7 @@
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<div id="cont">02</div>
+					<!-- <div id="cont">02</div> -->
 				</div>
 				
 				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
@@ -26,6 +26,12 @@
 				
 				<div id="logo"></div> <!-- Logo -->
 				<nav>
+					<div id="caixaPesq">
+						<div id="caixaPesqFechar"></div>
+						<form name="formPesq" id="formPesq" method="post" action="#">
+							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+						</form>
+					</div>
 					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
 						<div class="item" id="btnMenu"></div>
 						<div class="item" id="btnPesquisa"></div>
@@ -39,7 +45,12 @@
 							<a href="dicas.html">dicas</a>
 						</li>
 						<li>
-							<a href="institucional.html">institucional</a>
+							<a href="#">institucional</a>
+							<ul class="subMenu">
+								<li><a href="parceiro.html">parceiros</a></li>
+								<li><a href="eventos.html">eventos</a></li>
+								<li><a href="sobre.html">sobre</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="lojas.html">lojas</a>
@@ -73,121 +84,66 @@
 					<a href="#">marca</a>
 				</span>
 			</div>
-			
-			<div id="slider">
-				<div class="sliderBtn" id="btnEsquerdo"></div>
-				<div class="sliderBtn" id="btnDireito"></div>
-			</div>
 
 			<div id="conteudo">
-				<h1 id="tit">promoção dia dos pais</h1>
-				<h2 id="subTit">de 15/09 até 23/09/2016</h2>
+				<h1 class="titPag">Promoção Dia Dos Pais</h1>
+				<!-- <h2 id="subTit">de 15/09 até 23/09/2016</h2> -->
 
 				<div class="caixaLn">
 					<div class="caixa">
 						<div class="caixaImg" id="caixaImg1">
 							<div class="btnAdicionar"></div>
 						</div>
+						<div class="caixaNota">
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+						</div>
 						<div class="caixaInfo">
 							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
+							<span class="precoNormal">R$ 195,00</span>
+							<span class="preco">R$ 200,00</span>
 						</div>
 					</div>
-
+					
 					<div class="caixa">
 						<div class="caixaImg" id="caixaImg2">
 							<div class="btnAdicionar"></div>
 						</div>
+						<div class="caixaNota">
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+						</div>
 						<div class="caixaInfo">
 							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
+							<span class="precoNormal">R$ 195,00</span>
+							<span class="preco">R$ 200,00</span>
 						</div>
 					</div>
-
+					
 					<div class="caixa">
 						<div class="caixaImg" id="caixaImg3">
 							<div class="btnAdicionar"></div>
 						</div>
+						<div class="caixaNota">
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+							<span class="caixaNotaImg"></span>
+						</div>
 						<div class="caixaInfo">
 							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
+							<span class="precoNormal">R$ 195,00</span>
+							<span class="preco">R$ 200,00</span>
 						</div>
 					</div>
 				</div>
-
-				<div class="caixaLn">
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg4">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg5">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg6">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-				</div>
-
-				<div class="caixaLn">
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg7">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg8">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-
-					<div class="caixa">
-						<div class="caixaImg" id="caixaImg9">
-							<div class="btnAdicionar"></div>
-						</div>
-						<div class="caixaInfo">
-							<span class="nome">capa para volante</span>
-							<span class="precoNormal">R$ 200,00</span>
-							<span class="preco">R$ 199,99</span>
-						</div>
-					</div>
-				</div>
-
 			</div>
 			<footer>
 				<div id="rod_centro">

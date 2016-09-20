@@ -13,9 +13,9 @@ header {
 
 #barra_lateral {
 	width:250px;height:100%;padding:0 50px;
-	background-color:#f0f0f0;box-shadow:0 0 10px 3px #222;
+	background-color:#f0f0f0;box-shadow:0 0 3px 1px #888;
 	position:fixed;top:0;left:-400px;
-	z-index:3;
+	z-index:101;
 }
 
 #br_tit {
@@ -73,7 +73,7 @@ header {
 nav {
 	width:100%;min-width:1000px;height:50px;margin:0 auto 0 auto;padding:10px 0;
 	background-color:#333;
-	position:relative;z-index:2;
+	position:relative;z-index:10;
 }
 
 #caixaPesq {
@@ -201,10 +201,10 @@ nav {
 
 .subMenu {
 	width:200px;height:auto;margin:0;padding:0;
-	background-color:#fff;
+	background-color:#fff;outline:solid 1px #e0e0e0;
 	visibility:hidden;opacity:0;
-	position:absolute;top:50px;left:-35px;z-index:5;
 	list-style:none;
+	position:absolute;top:50px;left:-35px;z-index:5;
 	transition:all 100ms;
 }
 
@@ -226,13 +226,26 @@ nav {
 /* Slider */
 #slider {
 	width:100%;height:400px;margin:0 auto;
-	background:#e0e0e0 url(../img/onix.jpg) center/100% no-repeat;
+	background-color:#e0e0e0;
 	position:relative;
+}
+
+#slides {
+	width:100%;height:100%;margin:0;padding:0;
+	/*background-color:#f23;*/
+	position:absolute;top:0;left:0;overflow:hidden;
+	list-style:none;
+}
+
+.slideItem {
+	width:100%;height:100%;
+	float:left;
+	background:transparent url(../img/onix.jpg) center/100% no-repeat;
 }
 
 .sliderBtn {
 	width:60px;height:60px;
-	position:absolute;top:170px;
+	position:absolute;top:170px;z-index:5;
 	opacity:0.6;
 	background:#f0f0f0 center/100% no-repeat;border-radius:100px;
 }
@@ -257,32 +270,6 @@ nav {
 #conteudo {
 	width:1000px;height:auto;margin:0 auto;padding:50px 0;
 	/*outline:solid 1px #ddd;*/background-color:transparent;
-}
-
-#caixaDica {
-	width:1000px;height:200px;margin:0 0 70px 0;padding:0;
-	/*background-color:#eee;*/
-}
-
-#caixaDica h1 {
-	color:#555;font-weight:normal;font-size:32px;
-}
-
-#caixaDica p {
-	padding:0;
-	color:#444;text-align:justify;line-height:23px;
-}
-
-#caixaDica #dataDica {
-	padding:5px;
-	display:block;
-	color:#222;text-align:left;font-size:17px;
-}
-
-#caixaDica #outrasDicas {
-	display:block;
-	float:right;
-	color:#25f;text-decoration:none;text-transform:capitalize;
 }
 
 footer {
