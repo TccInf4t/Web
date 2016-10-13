@@ -24,8 +24,19 @@
 					<span class="itemLogin">inscrever-se</span>
 					<span class="itemLogin">entrar</span>
 				</div>
-				
-				<div id="logo"></div> <!-- Logo -->
+				<?php
+
+				require_once('bd/conexao.php');
+				Conectar();
+
+				$sql="select * from imagem where classname='TLogo'";
+				$select=mysql_query($sql);
+
+				$logo=mysql_fetch_array($select);
+
+
+				?>
+				<div id="logo" style="background-image:url(<?php echo('CMS/'.$logo['caminho']); ?>);"></div> <!-- Logo -->
 				<nav>
 					<div id="caixaPesq">
 						<div id="caixaPesqFechar"></div>
@@ -38,61 +49,33 @@
 						<div class="item" id="btnPesquisa"></div>
 					</div>
 					
-					<ul id="listaMenu">
-						<li class="pag_atuals">
-							<a href="index.html">home</a>
-						</li>
-						<li>
-							<a href="dicas.html">dicas</a>
-						</li>
-						<li>
-							<a href="#">institucional</a>
-							<ul class="subMenu">
-								<li><a href="parceiro.html">parceiros</a></li>
-								<li><a href="eventos.html">eventos</a></li>
-								<li><a href="sobre.html">sobre</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="lojas.html">lojas</a>
-						</li>
-						<li>
-							<a href="promocoes.html">promoções</a>
-						</li>
-						<li>
-							<a href="contato.html">contato</a>
-						</li>
-					</ul>
+					<?php
+
+						require_once('standard/menu.php');
+
+					?>
 				</nav>
 			</header>
-			
-			<!-- Barra Lateral -->
-			<div id="barra_lateral">
-				<span id="br_tit">categoria</span>
-				<span class="br_item">
-					<a href="#">acessorio interno</a>
-				</span>
-				<span class="br_item">
-					<a href="#">carro</a>
-				</span>
-				<span class="br_item">
-					<a href="#">montadora</a>
-				</span>
-				<span class="br_item">
-					<a href="#">acessorio externo</a>
-				</span>
-				<span class="br_item">
-					<a href="#">marca</a>
-				</span>
-			</div>
+			<?php
+				require_once 'standard/barraCategoria.php';
+			 ?>
 			
 			<!-- Slider -->
 			<div id="slider">
 				<ul id="slides">
-					<li class="slideItem" id="slideImg1"></li>
-					<li class="slideItem" id="slideImg2"></li>
-				</ul>
+				<?php
 
+					$sql="select * from imagem where classname='TSlideHome'";
+					$select=mysql_query($sql);
+
+					while($img=mysql_fetch_array($select)){
+
+				?>
+					<li class="slideItem" <?php echo('style="background-image:url(CMS/'.$img['caminho'].');"'); ?>><h2><?php echo ($img['nome']); ?></h2></li>
+					<?php
+					}
+					?>
+				</ul>
 				<div class="sliderBtn" id="btnEsquerdo"></div>
 				<div class="sliderBtn" id="btnDireito"></div>
 			</div>
@@ -203,20 +186,23 @@
 						</div>
 					</div>
 				</div>
+				<?php
 
+					$sql="select * from conteudosite where classname='TDica' order by oid_conteudosite desc";
+				
+					$select=mysql_query($sql);
+
+					$dica=mysql_fetch_array($select);	
+
+				?>
 				<!-- Dicas -->
 				<div id="caixaDica">
 					<h1>
-						Cabos de Vela: Borracha ou Silicone?
-						<a href="Dicas.html" id="outrasDicas">ver outras dicas</a>
+						<?php echo($dica['titulo']); ?>
+						<a href="Dicas.php" id="outrasDicas">ver outras dicas</a>
 					</h1>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<?php echo($dica['descricao']); ?>
 					</p>
 				</div>
 				
@@ -324,32 +310,11 @@
 					</div>
 				</div>
 			</div>
-			<footer>
-				<div id="rod_centro">
-					<div id="rodContato">
-						<div class="rod_bloco">
-							<div class="rod_img" id="rodBlocoImg1"></div>
-							<span class="rod_val">contato@onpeças.com</span>
-						</div>
-						<div class="rod_bloco">
-							<div class="rod_img" id="rodBlocoImg2"></div>
-							<span class="rod_val">(11) 4587-8965</span>
-						</div>
-						<div class="rod_bloco">
-							<div class="rod_img" id="rodBlocoImg3"></div>
-							<span class="rod_val">facebook.com/onpecas</span>
-						</div>
-						<div class="rod_bloco">
-							<div class="rod_img" id="rodBlocoImg4"></div>
-							<span class="rod_val">twitter.com/onpecas</span>
-						</div>
-					</div>
+			<?php
 
-					<div id="rodTexto">
-						OnPeças 1998-2016. Todos os Direitos Reservados.
-					</div>
-				</div>
-			</footer>
+				require_once('standard/rodape.php');
+
+			?>
 		</div>
 	<body>
 </html>

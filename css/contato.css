@@ -1,5 +1,6 @@
-#conteudo {
-	height:500px;
+#formContato {
+	height:auto;
+	overflow:hidden;
 }
 
 .formText {
@@ -10,6 +11,11 @@
 .formText:nth-child(3) {
 	width:200px;
 }
+
+.formText:nth-child(4) {
+	width:200px;
+}
+
 
 .formTextArea {
 	width:500px;height:150px;margin:10px 0;

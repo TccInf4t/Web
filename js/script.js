@@ -1,6 +1,6 @@
 $(function(){
 	$(".caixa").click(function(){
-		window.location = "produto.html";
+		window.location = "produto.php";
 	});
 
 	// Caixa de pesquisa
