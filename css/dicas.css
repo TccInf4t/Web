@@ -15,12 +15,14 @@ a{
 
 #veja_mais{
 	margin:20px 0;
+	z-index:4;
 	font-size: 20px; color: #222; font-family: arial, sans-serif; 
 }
 
 .dicaItem {
 	width:600px; height: auto;margin:5px 0;padding:25px 30px;
 	background-color: #f0f0f0;
+	z-index:4;
 	color:#555;font-weight:bold;
 }
 

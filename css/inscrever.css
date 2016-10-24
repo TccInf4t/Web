@@ -1,0 +1,42 @@
+#formContato {
+	height:auto;
+	overflow:hidden;
+}
+
+.formText {
+	width:400px;margin:10px 0;
+	outline:none;
+}
+
+.formTextError{
+	width:400px;margin:10px 0;
+	border:1px solid red;
+	outline:none;
+}
+
+.formText:nth-child(1) {
+	width:400px;
+}
+
+.formText:nth-child(4) {
+	width:400px;
+}
+
+
+.formTextArea {
+	width:500px;height:150px;margin:10px 0;
+	resize:none;
+	font-size:17px;
+}
+
+.infoNome {
+	display:block;
+	color:#555;font-size:18px;
+}
+
+.error{
+
+	display:none;
+	color:red;
+
+}

@@ -2,7 +2,7 @@
 
 <html lang="pt-br">
 	<head>
-		<title>Layout Test</title>
+		<title>OnPeças</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
@@ -15,17 +15,16 @@
 		<script src="js/script.js" type="text/javascript"></script>
 	</head>
 	<body>
+	</div>
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
 					<!-- <div id="cont">02</div> -->
 				</div>
 				
-				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
-					<span class="itemLogin">inscrever-se</span>
-					<span class="itemLogin">entrar</span>
-				</div>
 				<?php
+
+				require_once('standard/login.php');
 
 				require_once('bd/conexao.php');
 				Conectar();

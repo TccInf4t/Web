@@ -43,9 +43,14 @@ p {
 	color:#000;text-transform:uppercase;
 }
 
+.formBtn:hover {
+	cursor:pointer;
+}
+
 /* Blocos de Produtos */
 .caixaLn {
-	width:auto;height:309px;margin:0 0 100px 0;
+	width:auto;height:auto;margin:0 0 100px 0;
+	overflow:hidden;
 }
 
 .caixa {

@@ -6,10 +6,11 @@
 ?>
 <footer>
 <div id="rod_centro">
+
 	<div id="rodContato">
 		<div class="rod_bloco">
 			<div class="rod_img" id="rodBlocoImg1"></div>
-			<span class="rod_val"><?php echo($rodape['email']); ?></span>
+			<span class="rod_val"><?php echo(strip_tags($rodape['email'])); ?></span>
 		</div>
 		<div class="rod_bloco">
 			<div class="rod_img" id="rodBlocoImg2"></div>
@@ -28,7 +29,7 @@
 		<div id="rodTexto">
 			<?php
 
-			 echo($rodape['nome']." - CNPJ:".$rodape['cnpj']); 
+			 echo(strip_tags($rodape['nome']." - CNPJ:".$rodape['cnpj'])); 
 			 ?></br>
 			©OnPeças 1998-2016. Todos os Direitos Reservados.
 		</div>

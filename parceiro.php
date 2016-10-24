@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
-		<title>Parceiro</title>
+		<title>OnPeças</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
@@ -18,11 +18,9 @@
 					<!-- <div id="cont">02</div> -->
 				</div>
 				
-				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
-					<span class="itemLogin">inscrever-se</span>
-					<span class="itemLogin">entrar</span>
-				</div>
 				<?php
+
+				require_once('standard/login.php');
 
 				require_once('bd/conexao.php');
 				Conectar();
@@ -67,7 +65,7 @@
 
 					while($parceiro=mysql_fetch_array($select)){
 				?>
-					<h1 class="tituloParceiro"><?php echo($parceiro['titulo']); ?></h1>
+					<h1 class="tituloParceiro"><?php echo(strip_tags($parceiro['titulo'])); ?></h1>
 						<a <?php echo('href="'.$parceiro['site'].'"'); ?> target="_blank">
 							<div class="logoPaceiro" <?php echo('style="background-image: url(CMS/'.$parceiro['caminho'].');"'); ?>  ></div>
 						</a>

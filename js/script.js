@@ -1,4 +1,49 @@
 $(function(){
+
+	var cont=0;
+
+	$("#entrar").click(function(){
+
+	if(cont == 0){
+
+		$("#login").show("fast");
+		cont = 1;
+
+	}else{
+
+		$("#login").hide("fast");
+		cont = 0;
+
+	}
+
+});
+
+$( "#logar" ).click(function( event ) {
+	event.preventDefault();
+	$.ajax({
+	    url : 'crud/login.php',
+	    data: {
+	     lemail : $("#lemail").val(),
+	     lsenha : $("#lsenha").val()
+	    },
+	    type : 'post',
+	    dataType : 'json',
+	    success : function(data){
+	        if(data.valor == 0){
+
+	         $("#loginerror").show("fast");
+
+	        }else{
+
+	         $("#loginerror").hide("fast");
+	         $("#flogin").submit();
+
+	        }
+	    },
+	});
+
+});
+
 	$(".caixa").click(function(){
 		window.location = "produto.php";
 	});
@@ -50,32 +95,3 @@ $(function(){
 	});
 });
 
-// function slide(){
-// 	var width = 1000;
-// 	var vel = 200;
-// 	var slides = $("#slides");
-// 	var slideAtual = 1;
-
-// 	$("#btnEsquerdo").click(anteriorSlide);
-// 	$("#btnDireito").click(proximoSlide);
-
-// 	function proximoSlide(){
-// 		$("#slides").animate({
-// 			left: "-=" + width + "px"
-// 		}, vel, function(){
-// 			slideAtual ++;
-
-			
-// 			if(slideAtual === $("#slides").children().length + 1){
-// 				slideAtual = 1;
-// 				slides.css("left", "0");
-// 			}
-// 		});
-// 	}
-
-// 	function anteriorSlide(){
-// 		$("#slides").animate({
-// 			left: "+=" + width + "px"
-// 		}, vel);	
-// 	}
-// }

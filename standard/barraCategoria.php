@@ -9,7 +9,7 @@
 				$cont++;
 	 ?>
 	<span class="br_item">
-		<a href="#"><?php echo($rs['nome']); ?></a>
+		<a href="<?php echo('index.php?oid='.$rs['oid_tipopeca']); ?>"><?php echo(strip_tags($rs['nome'])); ?></a>
 	</span>
 	<?php 
 		}

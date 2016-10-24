@@ -2,7 +2,7 @@
 
 <html lang="pt-br">
 	<head>
-		<title>Layout Test</title>
+		<title>OnPeças</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
@@ -11,19 +11,19 @@
 
 		<script src="js/jquery3.1.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/modal.js" type="text/javascript"></script>
 	</head>
 	<body>
+	<div id="mascara"></div>
 		<div id="corpo">
 			<header>	
 				<div id="carrinho">  <!-- Carrinho de Compras  -->
 					<!-- <div id="cont">02</div> -->
 				</div>
 				
-				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
-					<span class="itemLogin">inscrever-se</span>
-					<span class="itemLogin">entrar</span>
-				</div>
 				<?php
+
+				require_once('standard/login.php');
 
 				require_once('bd/conexao.php');
 				Conectar();
@@ -70,27 +70,27 @@
 				<div id="texto_conteudo">
 					<p>
 						<?php
-							echo(nl2br($sobre['descricao']));
+							echo(nl2br(strip_tags($sobre['descricao'])));
 						?>
 					</p>
 					<h3>Missão</h3>
 
 					<p>
 					<?php
-						echo(nl2br($sobre['missao']));
+						echo(nl2br(strip_tags($sobre['missao'])));
 					?>
 					</p>
 					<h3>Visão</h3>
 					<p>
 					<?php
-						echo(nl2br($sobre['visao']));
+						echo(nl2br(strip_tags($sobre['visao'])));
 					?>
 					</p>
 					<h3>Valores</h3>
 
 					<p>
 					<?php
-						echo(nl2br($sobre['valores']));
+						echo(nl2br(strip_tags($sobre['valores'])));
 					?>
 					</p>
 				</div>

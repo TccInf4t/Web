@@ -2,7 +2,7 @@
 
 <html lang="pt-br">
 	<head>
-		<title>Layout Test</title>
+		<title>OnPeças</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
@@ -20,11 +20,9 @@
 					<!-- <div id="cont">02</div> -->
 				</div>
 				
-				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
-					<span class="itemLogin">inscrever-se</span>
-					<span class="itemLogin">entrar</span>
-				</div>
 				<?php
+
+				require_once('standard/login.php');
 
 				require_once('bd/conexao.php');
 				Conectar();
@@ -77,41 +75,21 @@
 				</span>
 			</div>
 			<?php
-				$sql="select * from conteudosite where classname='TEvento' order by oid_conteudosite desc";
-				$select=mysql_query($sql);
 
-				$evento=mysql_fetch_array($select);
+			if(isset($_GET['oid'])){
 
-			?>
-			<div id="conteudo">
-				<h1 class="titPag"><?php echo($evento['titulo']); ?></h1>
-				<span id="dtEvento">
-					dia <strong><?php echo($evento['dt']); ?></strong> às <strong><?php echo($evento['hr']); ?></strong>
-				</span>
+				require_once("selectevento.php");
 
-				<p>
-					<?php echo($evento['descricao']); ?>
-				</p>
+			}else{
 
-				<h2 class="outrosEventos">Outros Eventos</h2>
+				require_once("alleventos.php");
 
-				<?php
-
-					$sql="select * from conteudosite where classname='TEvento' and oid_conteudosite != ".$evento['oid_conteudosite']." order by rand() limit 3;";
-
-				
-					$select=mysql_query($sql);
-
-					while($eventos=mysql_fetch_array($select)){
-
-				?>
-				<a href="<?php echo('eventos.php?oid='.$eventos['oid_conteudosite']); ?>">
-				<div class="eventoItem"><?php echo($eventos['titulo']); ?></div>
-				</a>
-				<?php
 			}
+
 				?>
+				
 			</div>
+
 			<?php
 
 				require_once('standard/rodape.php');

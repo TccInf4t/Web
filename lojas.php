@@ -2,7 +2,7 @@
 
 <html lang="pt-br">
 	<head>
-		<title>Layout Test</title>
+		<title>OnPeças</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
@@ -19,11 +19,9 @@
 					<!-- <div id="cont">02</div> -->
 				</div>
 				
-				<div id="caixaLogin"> <!-- Botão de Inscrição e Login -->
-					<span class="itemLogin">inscrever-se</span>
-					<span class="itemLogin">entrar</span>
-				</div>
 				<?php
+
+				require_once('standard/login.php');
 
 				require_once('bd/conexao.php');
 				Conectar();
@@ -72,28 +70,28 @@
 					?>
 				<div class="lojaItem">
 					<div class="lojaInfo">
-						<span class="infoNome"><?php echo($lojas['titulo']); ?></span>
+						<span class="infoNome"><?php echo(strip_tags($lojas['titulo'])); ?></span>
 						
 						<span class="infoItem">cidade</span>
-						<span class="infoCont"><?php echo($lojas['cidade']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['cidade'])); ?></span>
 
 						<span class="infoItem">estado</span>
-						<span class="infoCont"><?php echo($lojas['estado']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['estado'])); ?></span>
 						
 						<span class="infoItem">CEP</span>
-						<span class="infoCont"><?php echo($lojas['cep']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['cep'])); ?></span>
 
 						<span class="infoItem">logradouro</span>
-						<span class="infoCont"><?php echo($lojas['logradouro']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['logradouro'])); ?></span>
 
 						<span class="infoItem">bairro</span>
-						<span class="infoCont"><?php echo($lojas['bairro']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['bairro'])); ?></span>
 						
 						<span class="infoItem">número</span>
-						<span class="infoCont"><?php echo($lojas['numero']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['numero'])); ?></span>
 
 						<span class="infoItem">telefone</span>
-						<span class="infoCont"><?php echo($lojas['telefone']); ?></span>
+						<span class="infoCont"><?php echo(strip_tags($lojas['telefone'])); ?></span>
 					</div>
 					<div class="lojaMapa">
 						<iframe src="https://www.google.com.br/maps/place/Jardim+Sao+Jose,+Barueri+-+SP,+06433-090/@-23.5249824,-46.8880512,17z/data=!3m1!4b1!4m5!3m4!1s0x94cf015db63f67d7:0x1d29ceb73d723f6c!8m2!3d-23.5253324!4d-46.887071" allowfullscreen></iframe>
