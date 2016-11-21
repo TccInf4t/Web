@@ -1,0 +1,82 @@
+#vazio {
+	padding:50px 0;
+	display:none;
+	color:#999;text-align:center;font-size:19px;
+}
+
+.produto {
+	width:950px;height:70px;margin:10px auto 20px auto;
+	border-bottom:solid 1px #ddd;
+}
+
+.produtoItem {
+	height:60px;margin:0 0 10px 0;
+	float:left;
+	/*outline:solid 1px #f23;*/
+}
+
+.item {
+	display:block;
+	color:#777;font-size:17px;
+}
+
+.cont {
+	margin:3px 0 0 0;
+	display:block;
+	color:#333;font-size:18px;
+}
+
+.produtoImg {
+	width:60px;height:60px;margin:0 30px 10px 0;
+	float:left;
+	background:transparent center/100% no-repeat;
+}
+
+.produtoNome {
+	width:300px;
+}
+
+.produtoPreco {
+	width:170px;
+}
+
+.produtoPrecoTotal {
+	width:170px;
+}
+
+.produtoQtd {
+	width:120px;
+	/*outline:solid 1px #ccc;*/
+}
+
+.produtoQtd > .item {
+	text-align:center;
+}
+
+.numQtd {
+	width:60px;height:30px;margin:0 auto;
+	color:#333;font-size:18px;text-align:center;
+}
+
+.btn_fechar {
+	width:60px;height:60px;
+	background:transparent url(../img/icon/fechar.png) center/30px no-repeat;
+	opacity:0.2;
+	float:right;
+}
+
+#btns {
+	width:auto;margin:30px auto 0 auto;
+	overflow:hidden;
+	/*outline:solid 1px #f23;*/
+}
+
+.btn {
+	width:200px;height:40px;padding:0;
+	display:block;float:left;
+	background-color:#ddd;
+	border:none;
+	color:#555;text-transform:uppercase;font-size:14px;font-weight:bold;
+}
+
+.btn:nth-child(1) {margin:0 5px 0 0;}

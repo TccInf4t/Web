@@ -8,7 +8,7 @@
 
 	function verificarSenha($senha){
 
-		$sql="select * from cliente where email='".$_SESSION['usuario']."' and senha='".$senha."'";
+		$sql="select * from cliente where email='".$_SESSION['usuario']['email']."' and senha='".$senha."'";
 
 		$select=mysql_query($sql);
 
@@ -36,7 +36,7 @@
 
 		}else{
 
-			if($email != $_SESSION['usuario']){
+			if($email != $_SESSION['usuario']['email']){
 
 				return 1;
 

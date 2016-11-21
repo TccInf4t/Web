@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	require_once('bd/conexao.php');
+	Conectar();
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -12,47 +18,22 @@
 		<script src="js/jquery3.1.js" type="text/javascript"></script>
 		<script src="js/jqueryCycle.js" type="text/javascript"></script>
 		<script src="js/script.js" type="text/javascript"></script>
+		<script src="js/script2.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div id="corpo">
 			<header>	
-				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<!-- <div id="cont">02</div> -->
-				</div>
-				
 				<?php
+					require_once("standard/carrinho.php");
+					require_once("standard/login.php");
 
-				require_once('standard/login.php');
+					$sql="select * from imagem where classname='TLogo'";
+					$select=mysql_query($sql);
 
-				require_once('bd/conexao.php');
-				Conectar();
-
-				$sql="select * from imagem where classname='TLogo'";
-				$select=mysql_query($sql);
-
-				$logo=mysql_fetch_array($select);
-
-
+					$logo=mysql_fetch_array($select);
 				?>
 				<div id="logo" style="background-image:url(<?php echo('CMS/'.$logo['caminho']); ?>);"></div>
-				<nav>
-					<div id="caixaPesq">
-						<div id="caixaPesqFechar"></div>
-						<form name="formPesq" id="formPesq" method="post" action="#">
-							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
-						</form>
-					</div>
-					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
-						<div class="item" id="btnMenu"></div>
-						<div class="item" id="btnPesquisa"></div>
-					</div>
-					
-					<?php
-
-						require_once('standard/menu.php');
-
-					?>
-				</nav>
+				<nav><?php require_once('standard/menu.php'); ?></nav>
 			</header>
 			
 			<!-- Barra Lateral -->
@@ -78,11 +59,11 @@
 
 			if(isset($_GET['oid'])){
 
-				require_once("selectevento.php");
+				require_once("eventos/selectevento.php");
 
 			}else{
 
-				require_once("alleventos.php");
+				require_once("eventos/alleventos.php");
 
 			}
 

@@ -1,10 +1,9 @@
 <?php 
-
 	session_start();
-	require_once('../bd/conexao.php');
+	require_once("../bd/conexao.php");
 	Conectar();
 
-	$sql="select * from cliente where email='".$_SESSION['usuario']."'";
+	$sql="select * from cliente where email='".$_SESSION['usuario']['email']."'";
 	$select=mysql_query($sql);
 
 	$usuario = mysql_fetch_array($select);

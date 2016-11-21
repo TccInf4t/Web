@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	require_once('bd/conexao.php');
+	require_once('funcao/produto.php');
+	Conectar();
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -15,16 +22,10 @@
 	</head>
 	<body>
 		<div id="corpo">
-			<header>	
-				<div id="carrinho">  <!-- Carrinho de Compras  -->
-					<!-- <div id="cont">02</div> -->
-				</div>
-				
+			<header>
 				<?php
-
-				require_once('standard/login.php');
-					require_once('bd/conexao.php');
-					Conectar();
+					require_once("standard/carrinho.php");
+					require_once("standard/login.php");
 
 					$sql="select * from imagem where classname='TLogo'";
 					$select=mysql_query($sql);
@@ -32,47 +33,76 @@
 					$logo=mysql_fetch_array($select);
 				?>
 				<div id="logo" style="background-image:url(<?php echo('CMS/'.$logo['caminho']); ?>);"></div> <!-- Logo -->
-				<nav>
-					<div id="caixaPesq">
-						<div id="caixaPesqFechar"></div>
-						<form name="formPesq" id="formPesq" method="post" action="#">
-							<input type="search" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
-						</form>
-					</div>
-					<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
-						<div class="item" id="btnMenu"></div>
-						<div class="item" id="btnPesquisa"></div>
-					</div>
-					
-					<?php
-
-						require_once('standard/menu.php');
-
-					?>
-				</nav>
+				<nav><?php require_once('standard/menu.php'); ?></nav>
 			</header>
 			<?php
 				require_once 'standard/barraCategoria.php';
 			 ?>
 			
+			<!-- Slider -->
+			<div id="slider">
+				<ul id="slides">
 				<?php
 
-				if(isset($_GET['oid'])){
+					$sql="select * from imagem where classname='TSlideHome'";
+					$select=mysql_query($sql);
 
-					require_once("selectcategoria.php");
-
-				}else{
-
-					require_once("indexpadrao.php");
-
-				}
+					while($img=mysql_fetch_array($select)){
 
 				?>
+					<li class="slideItem" <?php echo('style="background-image:url(CMS/'.$img['caminho'].');"'); ?>><h2><?php echo ($img['nome']); ?></h2></li>
+					<?php
+					}
+					?>
+				</ul>
+				<div class="sliderBtn" id="btnEsquerdo"></div>
+				<div class="sliderBtn" id="btnDireito"></div>
+			</div>
+			<div id="conteudo">
+				<!-- Select dos produtos mais comprados do site -->
+				<h1 class="caixaTitulo">produtos mais comprados</h1>
+				<div class="caixaLn">
+					<?php 
+						$sql="select * from visualizacaopeca order by rand() limit 6;";
+						$select=mysql_query($sql);
+
+						while ($rs=mysql_fetch_array($select)) {
+							$img = "empresa/" . $rs['caminho'];
+							criar_produto($rs['oid_peca'], $rs['nome'], $rs['preco'], $img);
+						}
+					 ?>
+				</div>
+
+				<!-- Select dos produtos em promoção do site -->
+				<h1 class="caixaTitulo">Promoções</h1>
+				<div class="caixaLn">
+					<?php 
+						$sql="select * from visualizacaopeca order by rand() limit 3;";
+						$select=mysql_query($sql);
+
+						while ($rs=mysql_fetch_array($select)) {
+							$img = "empresa/" . $rs['caminho'];
+							criar_produto($rs['oid_peca'], $rs['nome'], $rs['preco'], $img);
+						}
+					 ?>
+				</div>
+			
+				<!-- Select dos produtos mais novos do site -->
+				<h1 class="caixaTitulo">novidades</h1>
+				<div class="caixaLn">
+					<?php 
+						$sql="select * from visualizacaopeca order by oid_peca desc limit 3;";
+						$select=mysql_query($sql);
+						
+						while ($rs=mysql_fetch_array($select)) {
+							$img = "empresa/" . $rs['caminho'];
+							criar_produto($rs['oid_peca'], $rs['nome'], $rs['preco'], $img);
+						}
+					 ?>
+				</div>
+			</div>
 			<?php
-
 				require_once('standard/rodape.php');
-
 			?>
-		</div>
 	<body>
 </html>

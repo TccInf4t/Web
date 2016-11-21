@@ -1,46 +1,57 @@
 <?php
 	session_start();
-	require_once('../bd/conexao.php');
+	require_once("../bd/conexao.php");
 	Conectar();
 
-	$sql="select * from cliente where email='".$_SESSION['usuario']."'";
-	$select=mysql_query($sql);
+	if(strlen($_SESSION['usuario']['cpfcnpj']) > 14){
 
-	$usuario = mysql_fetch_array($select);
+		$checkcnpj = "checked";
+		$checkcpf= null;
+
+	}else{
+
+		$checkcnpj = null;
+		$checkcpf= "checked";
+
+	}
 
 ?>
 
 <!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
-
-<script src="js/perfilValidacao.js" type="text/javascript"></script>
-<script src="js/maskInput.js" type="text/javascript"></script>
-<script src="js/masks.js" type="text/javascript"></script>
 <script src="js/jquery3.1.js" type="text/javascript"></script> 
+<script src="js/perfilValidacao.js" type="text/javascript"></script>
+<script src="js/funcoes.js" type="text/javascript"></script>
+
+<?php
+
+	$data=implode("/",array_reverse(explode("-",$_SESSION['usuario']['data_nascimento'])));
+
+?>
 
 <form action="#" method="post" id="formeditdados" name="formEditDados">
 	<span class="infCampo">Nome completo *:</span>
 	<span id="nomeerror" class="error"></span>
-	<input type="text" name="txtNome" class="formText" id="nome" value="<?php echo($usuario['nome']); ?>"  placeholder="jose da Silva"  />
+	<input type="text" name="txtNome" class="formText" id="nome" value="<?php echo($_SESSION['usuario']['nome']); ?>"  placeholder="jose da Silva"  />
 
 	<span class="infCampo">Endereço de E-mail *:</span>
 	<span id="emailerror" class="error"></span>
-	<input type="text" name="txtEmail" class="formText" id="email" value="<?php echo($usuario['email']); ?>" placeholder="josef10@outlook.com"  />
+	<input type="text" name="txtEmail" class="formText" id="email" value="<?php echo($_SESSION['usuario']['email']); ?>" placeholder="josef10@outlook.com"  />
 
 
 	<span class="infCampo">
-	CPF *:<input type="radio" name="cp" id="cpfc" value="1" checked />
-	CNPJ *:<input type="radio" name="cp" id="cnpjc" value="2"/>
+	CPF *:<input type="radio" name="cp" id="cpfc" value="1" <?php echo($checkcpf); ?> />
+	CNPJ *:<input type="radio" name="cp" id="cnpjc" value="2" <?php echo($checkcnpj); ?>/>
 	</span>
 
 <?php
 	$cpf=null;
 	$cnpj=null;
 
-	if(strlen($usuario['cpfcnpj']) == 14){
-		$cpf=$usuario['cpfcnpj'];
+	if(strlen($_SESSION['usuario']['cpfcnpj']) == 14){
+		$cpf=$_SESSION['usuario']['cpfcnpj'];
 
 	}else {
-		$cnpj=$usuario['cpfcnpj'];
+		$cnpj=$_SESSION['usuario']['cpfcnpj'];
 	}
 
 	?>
@@ -57,12 +68,13 @@
 
 	<span class="infCampo">Data de Nascimento*:</span>
 	<span id="dataerror" class="error"></span>
-	<input  type="text" id="data"  name="txtData" class="formText" value="<?php echo($usuario['data_nascimento']); ?>" placeholder="24/12/1969"   minlength="8" />
+	<input  type="text" id="data"  name="txtData" class="formText" value="<?php echo($data); ?>" placeholder="24/12/1969"   minlength="8"/>
 
-	<span class="infCampo">Senha *:</span>
+	<span class="infCampo">Sua Senha:</span>
 	<span id="senhaerror" class="error"></span>
 	<input type="password" name="txtSenha" class="formText" id="senha" value=""  />
 
 	<input type="button" id="salvar" value="salvar" name="btnSalvar"/>
+	
 </form>				
 		

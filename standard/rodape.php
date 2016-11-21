@@ -30,6 +30,7 @@
 			<?php
 
 			 echo(strip_tags($rodape['nome']." - CNPJ:".$rodape['cnpj'])); 
+			 Desconectar();
 			 ?></br>
 			©OnPeças 1998-2016. Todos os Direitos Reservados.
 		</div>

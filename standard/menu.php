@@ -1,9 +1,13 @@
-<?php
-
-	require_once('bd/conexao.php');
-	Conectar();
-
-?>
+<div id="caixaPesq">
+	<div id="caixaPesqFechar"></div>
+	<form name="formPesq" id="formPesq" method="post" action="pesquisa.php">
+		<input type="text" name="txtPesq" id="txtPesq" placeholder="Pesquisar" />
+	</form>
+</div>
+<div id="pesqMenu"> <!-- Icone de Menu e Pesquisa  -->
+	<div class="item" id="btnMenu"></div>
+	<div class="item" id="btnPesquisa"></div>
+</div>
 
 <ul id="listaMenu">
 	<li class="pag_atuals">

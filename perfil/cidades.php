@@ -1,6 +1,6 @@
 <?php
-	require_once("bd/conexao.php");
-
+	session_start();
+	require_once("../bd/conexao.php");
 	Conectar();
 
 	$id = $_GET['id'];

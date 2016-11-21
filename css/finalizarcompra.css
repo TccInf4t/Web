@@ -1,0 +1,48 @@
+#divEndereco{
+
+	display:none;
+
+}
+#aff{
+
+	margin-top: 20px;
+
+}
+
+
+.infCampo{
+
+	color: #666666;
+	margin-left:14px;
+	padding-top: 10px;
+	font-size: 15px;
+	display:block;
+
+}
+
+.infCampo2{
+
+	color: #666666;
+	margin-left:12px;
+	padding-top: 10px;
+	font-size: 15px;
+
+}
+
+.inftitulo{
+
+	color: #666666;
+	margin-left:14px;
+	padding-top: 10px;
+	display:block;
+
+}
+
+.formText{
+
+	margin-left:14px;
+	padding-top: 5px;
+	height:30px;
+	width: 330px;
+
+}

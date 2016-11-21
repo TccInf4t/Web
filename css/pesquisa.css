@@ -1,0 +1,21 @@
+#caixaPesq {
+	display:block;
+	top:70px;
+	opacity:1;
+}
+
+#titulo {
+	display:none;
+	margin:50px 0 0 0;
+}
+
+#menssagem {
+	width:1000px;margin:150px 0 0 0;
+	display:none;
+	color:#bbb;text-align:center;font-size:30px;
+}
+
+#ini {
+	width:1000px;margin:150px 0 0 0;
+	color:#bbb;text-align:center;font-size:30px;
+}

@@ -5,88 +5,98 @@ body {margin:0;background-color:transparent;}
 	width:100%;min-width:1000px;height:100%;
 }
 
-#entrar:hover{
-
-	cursor:pointer;
-
+#marcas{
+	list-style: none;
 }
-#login{
 
+#x {
+	position:absolute;
+	right:20px;
+	top:15px;
+}
+
+#x:hover{
+	cursor:pointer;
+}
+
+#marcas ul {
 	display:none;
+	list-style: none;
+}
 
+#marcas ul ul {
+	display:none;
+	list-style: none;
+}
+
+#marcas li:hover{
+	cursor:pointer;
+}
+
+#entrar:hover{
+	cursor:pointer;
+}
+
+#login{
+	display:none;
 }
 
 #loginerror{
-
-		display:none;
-		color:red;
-		font-size:10px;
-		font-family:Arial;
-
+	display:none;
+	color:red;
+	font-size:10px;
+	font-family:Arial;
 }
 
-#login{
-	
-		width:200px;
-		left:150px;
-		height:145px;
-		margin:0 0 0 0;
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		padding:8px 10px 8px 10px;
-		border:1px solid #848484;
-		z-index:999;
-		position: absolute;
-		top:60px;
-		background-color:#fff;
-	
-	}
-	
-	.infoLogin{
-	
-		display:block;
-		color:#555;
-		font-size:17px;
-		font-family:Arial;
-		font-weight:bold;
-	}
-	
-	.formTextLogin {
-	
-		width:200px;
-		margin:5px 0;
-		outline:none;
-		background-color:#fff;
-	}
-	
-	
-	.formBtnLogin {
-		width:70px;height:30px;
-		background-color:#000000;
-		border:none;outline:none;
-		color:#FFFFFF;
-		font-family:Arial;
-		font-weight:bold;
-	}
+#login {
+	width:200px;
+	left:150px;
+	height:145px;
+	margin:0 0 0 0;
+	border-radius: 10px;
+	padding:8px 10px 8px 10px;
+	border:1px solid #848484;
+	z-index:999;
+	position: absolute;
+	top:60px;
+	background-color:#fff;
+}
 
-	.formBtnLogin:hover {
-		cursor:pointer;
-		 opacity: 0.8;
-		filter: alpha(opacity=80);
-	}
-	
-	.titPagLogin {
-		margin:0 0 10px 0;
-		padding:0 0px 5px 0px;
-		color:#555;
-		font-weight:bold;
-		font-size:17px;
-		border-bottom:solid 1px #aaa;
-		font-family: Arial;
-	}
+.formTextLogin {
+	width:200px;
+	margin:5px 0;
+	outline:none;
+	background-color:#fff;
+}
 
-/* Cabeçalho */
+
+.formBtnLogin {
+	width:70px;height:30px;
+	background-color:#000000;
+	border:none;outline:none;
+	color:#FFFFFF;
+	font-family:Arial;
+	font-weight:bold;
+	/*display:none;*/
+}
+
+.formBtnLogin:hover {
+	cursor:pointer;
+	 opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+.titPagLogin {
+	margin:0 0 10px 0;
+	padding:0 0px 5px 0px;
+	color:#555;
+	font-weight:bold;
+	font-size:17px;
+	border-bottom:solid 1px #aaa;
+	font-family: Arial;
+}
+
+/* CabeÃ§alho */
 header {
 	width:100%;min-width:1000px;height:auto;margin:0 auto;padding:0;
 	background-color:transparent;box-shadow:0 0 10px 1px #aaa;
@@ -124,42 +134,78 @@ header {
 }
 
 #caixaLogin {
-	width:241px;height:46px;margin:0 0 0 0;padding:3px 40px 8px 10px;
+	width:241px;height:auto;margin:0 0 0 0;padding:3px 40px 8px 10px;
 	float:left;
-	background-color:transparent;border-radius:0 0 100px 0;
+	overflow:hidden;
+	/*background-color:#f23;*/border-radius:0 0 100px 0;
 }
 
 #caixaUsuario {
-	width:310px;height:110px;
-	margin-top:10px;
-	padding:3px 40px 8px 10px;
+	width:320px;height:70px;margin:25px 0 25px 10px;padding:0;
 	float:left;
-	background-color:transparent;
+	/*background-color:#f23;*/
 }
 
-#imgUsuario{
-
-	border:1px solid #000;
-	height:100px;
-	width: 100px;
-	margin-top:10px;
+#imgUsuario {
+	width:70px;height:70px;
+	/*border:none;*/
 	float:left;
-
+	border-radius: 100px;
+	background:transparent center/100% no-repeat;
 }
 
-#infUsuario{
-
-	height:100px;
-	width: 195px;
-	margin-top:10px;
-	margin-left:10px;
+#infUsuario {
+	width:250px;height:70px;margin:0;
 	float:left;
+	/*background-color:#ccc;*/
+}
 
+.infoLogin {
+	display:block;
+	color:#555;font-family:Arial;
+}
+
+#infoLoginNome {
+	margin:5px 0 0 20px;
+	color:#333;font-weight:bold;font-size:18px;
+}
+
+#infoLoginEmail {
+	margin:0 0 0 20px;
+	font-size:15px;
+}
+
+#opt {
+	width:20px;height:20px;margin:7px 0 0 20px;
+	position:relative;
+	background:transparent url(../img/icon/optUsuario.png) center/100% no-repeat;
+}
+
+#opt:hover {
+	cursor:pointer;
+}
+
+#optUsuario {
+	width:200px;height:auto;padding:10px 0;
+	display:none;
+	position:absolute;top:0;left:0;
+	z-index:11;
+	background-color:#f5f5f5;outline:solid 1px #e0e0e0;/*box-shadow:0 0 5px 1px #ddd;*/
+}
+
+#optUsuario > a {
+	padding:10px 0 10px 20px;
+	display:block;
+	color:#444;text-transform:capitalize;text-decoration:none;font-size:16px;
+}
+
+#optUsuario > a:hover {
+	cursor:pointer;
+	background-color:#f0f0f0;
 }
 
 .itemLogin {
 	float:left;margin:0;padding:15px 20px;
-	display:block;
 	color:#555;text-align:center;text-transform:uppercase;font-size:14px;font-weight:bold;
 }
 
@@ -212,15 +258,15 @@ nav {
 
 #caixaPesq #caixaPesqFechar {
 	width:50px;height:50px;margin:0 70px;
+	opacity:0.2;
+	position:absolute;top:10px;right:0;
 	background:transparent url(../img/icon/fechar.png) center/35px no-repeat;
-	opacity:0.4;
-	float:right;
 	transition:all 100ms;
 }
 
 #caixaPesq #caixaPesqFechar:hover {
 	cursor:pointer;
-	opacity:0.7;
+	opacity:0.3;
 	transition:all 100ms;
 }
 
@@ -248,6 +294,10 @@ nav {
 	background:transparent url(../img/icon/carrinho_compra.png) center/80px no-repeat;
 }
 
+#carrinho:hover {
+	cursor:pointer;
+}
+
 #carrinho #cont {
 	width:42px;height:42px;
 	background-color:#222;
@@ -256,12 +306,58 @@ nav {
 	color:#fff;text-align:center;line-height:42px;
 }
 
+#listaCarrinho {
+	width:370px;height:auto;padding:20px 0 0 0;
+	display:none;
+	position:absolute;top:85px;right:-10px;
+	opacity:0;z-index:20;
+	background-color:#ededed;box-shadow:0 0 7px 1px #aaa;
+}
+
+#carrinhoFechar {
+	width:30px;height:30px;
+	display:block;
+	position:absolute;top:30px;right:30px;
+	opacity:0.3;
+	background:transparent url(../img/icon/fechar.png) center/25px no-repeat;
+	border-radius:100px;
+}
+
+.carrinhoItem {
+	width:auto;height:auto;margin:15px 20px;padding:8px 0;
+	overflow:hidden;
+	border-bottom:solid 1px #e0e0e0;
+}
+
+.carrinhoItem:last-child {
+	border-bottom:none;
+}
+
+.carrinhoItemImg {
+	width:60px;height:60px;margin:0 10px 0 0;
+	float:left;
+	background:#fff center/35px no-repeat;
+	border-radius:100px;
+}
+
+.carrinhoItemNome {
+	width:auto;height:auto;margin:18px auto 0 auto;
+	display:block;
+	float:left;
+	color:#555;font-size:16px;font-weight:bold;
+}
+
+#carrinhoVerTodos {
+	margin:25px 0 25px 0;
+	display:block;
+	color:#5af;text-align:center;text-transform:uppercase;text-decoration:none;font-size:14px;
+}
+
 /* Icone de Menu e Pesquisa */
 #pesqMenu {
 	width:130px;height:50px;margin:0;
 	float:left;
 	position:absolute;top:10px;left:20px;
-	
 }
 
 #btnMenu {
@@ -392,11 +488,11 @@ nav {
 	background-image:url(../img/icon/seta_direita.png);
 }
 
-/* Conteúdo */
+/* ConteÃºdo */
 #conteudo {
-	width:1000px;height:auto;margin:0 auto;padding:50px 0;
-	/*outline:solid 1px #ddd;*/background-color:transparent;
-	min-height: 500px;
+	width:1000px;min-height: 500px;height:auto;margin:0 auto;padding:50px 0;
+	background-color:transparent;
+	overflow:hidden;
 }
 
 footer {

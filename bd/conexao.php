@@ -1,28 +1,22 @@
 ﻿<?php 
-		function Conectar(){
+	function Conectar(){
+		$servidor="10.107.144.52";
+		$usuario="csop";
+		$senha="csoptcc@2016";
 
-			$servidor="10.107.134.30";
-			$usuario="csop";
-			$senha="csoptcc@2016";
-			
-			
+		if($conexao=mysql_connect($servidor, $usuario, $senha)){
+			mysql_select_db("dbcsop");
+			mysql_set_charset('utf8',$conexao);
 
-			if($conexao=mysql_connect($servidor, $usuario, 
-				$senha)){
-
-				mysql_select_db("dbcsop");
-
-				mysql_set_charset('utf8',$conexao);
-
-			}else{
-				echo("ERRO na conexão com o banco de dados".mysql_error());
-				die();
-			}
-
-			return $conexao;
+		}else {
+			echo("ERRO na conexão com o banco de dados".mysql_error());
+			die();
 		}
 
-		function Desconectar(){
-			mysql_close($conexao);
-		}
+		return $conexao;
+	}
+
+	function Desconectar(){
+		mysql_close();
+	}
 ?>

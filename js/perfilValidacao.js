@@ -1,127 +1,6 @@
 $(function(){
 
 
-	function sonumero(element){
-
-	var txt = $(element).val().trim();
-	txt2 = txt.charAt(txt.length-1);
-
-	if(isNaN(parseFloat(txt))){
-
-		txt = txt.replace(txt2, "");
-		$(element).val(txt);
-
-	}
-
-}
-
-function semespeciais(element){
-
-	var regex = '[^a-zA-Z0-9]+';
-	var txt = $(element).val().trim();
-	txt2 = txt.charAt(txt.length-1);
-
-	 if(txt2.match(regex)) {
-        
-	 	txt = txt.replace(txt2, "");
-		$(element).val(txt);
-
-   	}
-
-}
-
-function paraemail(element){
-
-	var regex = '[^a-zA-Z0-9@.]+';
-	var txt = $(element).val().trim();
-	txt2 = txt.charAt(txt.length-1);
-
-	 if(txt2.match(regex)) {
-        
-	 	txt = txt.replace(txt2, "");
-		$(element).val(txt);
-
-   	}
-
-}
-
-function soletras(element){
-
-	var regex = '[^a-zA-Z]+';
-	var txt = $(element).val().trim();
-	txt2 = txt.charAt(txt.length-1);
-
-	 if(txt2.match(regex)) {
-        
-	 	txt = txt.replace(txt2, "");
-		$(element).val(txt);
-
-   	}
-
-}
-
-function isempt(element) {
-  
-	if($(element).val().trim() == ""){
-
-		$(element).addClass("formTextError");
-		$(element+"error").text("O campo está vazio!");
-		$(element+"error").show("fast");
-
-		return 1;
-
-	}else{
-
-		$(element).removeClass("formTextError");
-		$(element+"error").hide("fast");
-
-		return 0;
-
-	}
-
-}
-
-function islenght(element,tamanho) {
-
-	var txt = $(element).val().trim();
-	txt = txt.replace("_", "");
-
-
-	if(txt.length < tamanho){
-
-		$(element).addClass("formTextError");
-		$(element+"error").text("O campo tem que ter no mínimo "+tamanho+" caracteres!");
-		$(element+"error").show("fast");
-		return 1;
-
-	}else{
-
-		$(element).removeClass("formTextError");
-		$(element+"error").hide("fast");
-		return 0;
-
-	}
-
-}
-
-function isequal(element,element2) {
-
-
-	if($(element).val().trim() != $(element2).val().trim()){
-
-			$(element).addClass("formTextError");
-			$(element+"error").text("As senhas não correspondem!");
-			$(element+"error").show("fast");
-			return 1;
-		}else{
-
-			$(element).removeClass("formTextError");
-			$(element+"error").hide("fast");
-			return 0;
-
-		}
-
-}
 $("#tcpf").css("display","block");
 $("#tcnpj").css("display","none");
 
@@ -139,48 +18,6 @@ $("#cnpjc").click(function(){
 	$("#tcnpj").show("fast");
 			
 });
-
-function usuarioexiste(element,num){
-
-	if(num == 1){
-
-		$(element).addClass("formTextError");
-		$(element+"error").text("Já existe um usuário com este email !");
-		$(element+"error").show("fast");
-
-		return 1;
-
-	}else{
-
-		$(element).removeClass("formTextError");
-		$(element+"error").hide("fast");
-
-		return 0;
-
-	}
-
-}
-
-function senhacerta(element,num){
-
-	if(num == 0){
-
-		$(element).addClass("formTextError");
-		$(element+"error").text("Senha Incorreta !");
-		$(element+"error").show("fast");
-
-		return 1;
-
-	}else{
-
-		$(element).removeClass("formTextError");
-		$(element+"error").hide("fast");
-
-		return 0;
-
-	}
-
-}
 
 $("#nome").blur(function(){
 
@@ -262,6 +99,35 @@ $("#data").blur(function(){
 
 });
 
+
+$("#senhaAtual").blur(function(){
+
+	isempt("#senhaAtual");
+	islenght("#senhaAtual",8);
+
+});
+
+$("#resenhaAtual").bind('input propertychange', function(){
+
+	isequal("#resenhaAtual","#senhaAtual");
+
+	semespeciais("#resenhaAtual");
+
+});
+
+$("#senhaAtual").bind('input propertychange', function(){
+
+	islenght("#senhaAtual",8);
+
+	isequal("#resenhaAtual","#senhaAtual");
+
+	semespeciais("#senhaAtual");
+
+	
+});
+
+
+
 $("#data").bind('input propertychange', function(){
 
 	var dia = $("#data").val().substr(0, 2);
@@ -330,6 +196,7 @@ $("#email").bind('input propertychange', function(){
 	paraemail("#email");
 
 });
+
 
 $("#salvar").click(function(){
 
@@ -404,6 +271,48 @@ $("#salvar").click(function(){
 
 });
 
+
+
+$("#senhaSalvar").click(function(){
+
+	cont = 0;
+
+	event.preventDefault();
+        $.ajax({
+            url : 'crud/perfilSelect.php',//url para acessar o arquivo
+            data: {
+                lsenha : $("#senha").val()
+            },//parametros para a funcao
+            type : 'post',//PROTOCOLO DE ENVIO PODE SER GET/POST
+            dataType : 'json',//TIPO DO RETORNO JSON/TEXTO 
+            success : function(data){//DATA É O VALOR RETORNADO
+                if(senhacerta("#senha",data.valor) == 1){
+
+                    cont++;
+
+                }else{
+
+
+					cont+=isempt("#senhaAtual");
+					cont+=islenght("#senhaAtual",8);
+					cont+=isempt("#resenhaAtual");
+					cont+=isequal("#resenhaAtual","#senhaAtual");
+
+                    if(cont == 0){
+
+						$("#formEditarSenha").submit();
+
+					}
+
+            }
+
+        },
+    });
+
+});
+
+
+
 jQuery('#formeditdados').submit(function(){
 	var dados = jQuery( this ).serialize();
 
@@ -416,12 +325,109 @@ jQuery('#formeditdados').submit(function(){
 		    $("#editDados").hide("fast");
 			$("#usuarioDados").show("fast");
 			$("#infdadosusuario").load("perfil/infDadosUsuario.php");
+			$("#caixaUsuario").load("perfil/areaLogin.php");
 		}
 	});
 					
 	return false;	
 });
 
+jQuery('#formEditarSenha').submit(function(){
+	var dados = jQuery( this ).serialize();
+
+	jQuery.ajax({
+		type: "POST",
+		url: "crud/perfil.php",
+		data: dados,
+		success: function( data )
+		{				  
+		    $("#editSenha").hide("fast");
+			$("#usuarioDados").show("fast");
+		}
+	});
+					
+	return false;	
+});
+
+$(function(){
+	$("#cbEstado").change(function(){
+		var id = $(this).val();
+
+		$.get("cidades.php", {id: id}, function(dados){
+			$("#cbCidade").html(dados);
+		});
+	});
+
+});
+
+$(function(){
+		var id = $("#cbEstado").val();
+
+		$.get("cidades.php", {id: id}, function(dados){
+			$("#cbCidade").html(dados);
+		});
+});
+
+
+$("#salvarEnd").click(function(){
+
+	cont = 0;
+
+	cont+=isempt("#logradouro");
+	cont+=isempt("#numero");
+	cont+=isempt("#cep");
+	cont+=islenght("#cep",8);
+	cont+=isempt("#bairro");
+
+	event.preventDefault();
+
+	$.ajax({
+            url : 'crud/perfilSelect.php',//url para acessar o arquivo
+            data: {
+                lsenha : $("#senha").val()
+            },//parametros para a funcao
+            type : 'post',//PROTOCOLO DE ENVIO PODE SER GET/POST
+            dataType : 'json',//TIPO DO RETORNO JSON/TEXTO 
+            success : function(data){//DATA É O VALOR RETORNADO
+                if(senhacerta("#senha",data.valor) == 1){
+
+                    cont++;
+
+
+                }else{
+
+                    if(cont == 0){
+                    	
+						$("#formeditendereco").submit();
+
+					}
+
+            }
+
+        },
+    });
+
+});
+
+jQuery('#formeditendereco').submit(function(){
+	var dados = jQuery( this ).serialize();
+
+	jQuery.ajax({
+		type: "POST",
+		url: "crud/perfil.php",
+		data: dados,
+		success: function( data )
+		{				  
+
+			$("#editEndereco").hide("fast");
+			$("#usuarioDados").show("fast");
+			$("#infenderecousuario").load("perfil/infEnderecoUsuario.php");
+
+		}
+	});
+					
+	return false;	
+});
 
 });
 

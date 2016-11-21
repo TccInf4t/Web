@@ -16,6 +16,51 @@
 	display:block;
 }
 
+#escolherimg {
+	margin-bottom:10px;
+	 cursor:pointer;
+}
+
+#escolherimg:hover {
+	opacity: 0.7;
+    filter: alpha(opacity=70);
+    cursor:pointer;
+}
+
+#escolherimg input{
+
+	  border:1px solid #ff0000; 
+	  width:120px;
+	  margin-left:10px;
+
+}
+
+#escolherimg input:hover{
+
+	  cursor:pointer;
+
+}
+
+#temCerteza{
+
+	display:none;
+	margin-bottom:10px;
+
+}
+
+#preview{
+
+	display: none;
+	position:absolute;
+
+}
+
+#editSenha{
+
+	display:none;
+
+}
+
 .infEditar{
 	color: #666666;
 	margin-left:10px;
@@ -25,6 +70,8 @@
 
 .infEditar:hover{
 	cursor:pointer;
+	opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 
 
@@ -58,10 +105,18 @@
 
 #imgUser{
 
+	height: 199px;
+	width: 199px;
+	border:none;
+	margin-bottom:30px;
+
+}
+
+#imgUser img{
+
 
 	height: 199px;
 	width: 199px;
-	border:1px solid #000;
 
 }
 
