@@ -9,7 +9,7 @@
 
 <html lang="pt-br">
 	<head>
-		<title>OnPeças</title>
+		<title>OnPeças - teste</title>
 		<meta charset="utf-8">
 		
 		<link href="css/base.css" type="text/css" rel="stylesheet">
